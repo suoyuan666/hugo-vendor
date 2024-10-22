@@ -39,8 +39,9 @@ jobs:
   
       - name: Compress vendor directory
         run: |
-          cd hugo
-          tar -caf hugo-0.136.2-vendor.tar.gz vendor
+          mv hugo hugo-0.136.2
+          cd hugo-0.136.2
+          tar -caf hugo-0.136.2-vendor.tar.gz hugo-0.136.2/vendor
   
       - name: Upload release asset
         uses: softprops/action-gh-release@v2
