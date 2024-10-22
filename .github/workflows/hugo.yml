@@ -40,7 +40,6 @@ jobs:
       - name: Compress vendor directory
         run: |
           mv hugo hugo-0.136.2
-          cd hugo-0.136.2
           tar -caf hugo-0.136.2-vendor.tar.gz hugo-0.136.2/vendor
   
       - name: Upload release asset
