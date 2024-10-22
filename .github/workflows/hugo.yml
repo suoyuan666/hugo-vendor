@@ -35,6 +35,7 @@ jobs:
       - name: Generate vendor directory
         run: |
           cd hugo
+          go mod tidy
           go mod vendor
   
       - name: Compress vendor directory
